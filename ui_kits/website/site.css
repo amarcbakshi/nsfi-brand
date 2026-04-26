@@ -1,0 +1,248 @@
+/* nSFi website — page-specific styles. Imports tokens from /colors_and_type.css */
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body.nsfi { background: var(--bg-1); color: var(--fg-2); }
+img { max-width: 100%; display: block; }
+
+.nsfi-page { min-height: 100vh; }
+
+/* ---------- Nav ---------- */
+.nsfi-nav {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 32px;
+  background: var(--bg-1);
+  border-bottom: 1px solid transparent;
+  transition: background var(--dur-fast), border-color var(--dur-fast);
+}
+.nsfi-nav.is-scrolled {
+  background: rgba(255,255,255,.94);
+  backdrop-filter: blur(8px);
+  border-color: var(--border-3);
+}
+.nsfi-nav__brand {
+  display: flex; align-items: center; gap: 12px;
+  text-decoration: none; color: var(--fg-1);
+}
+.nsfi-nav__brand img { width: 40px; height: 40px; }
+.nsfi-nav__brand-text { display: flex; flex-direction: column; line-height: 1; }
+.nsfi-nav__brand-mark { font-family: var(--font-mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--clay); }
+.nsfi-nav__brand-full { font-family: var(--font-display); font-weight: 540; font-size: 18px; margin-top: 2px; letter-spacing: -0.01em; }
+.nsfi-nav__items { display: flex; align-items: center; gap: 18px; }
+.nsfi-nav__link {
+  font-family: var(--font-mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--fg-1); text-decoration: none;
+}
+.nsfi-nav__link:hover { color: var(--thermal-orange); }
+
+/* ---------- Buttons ---------- */
+.btn {
+  font-family: var(--font-sans); font-weight: 700; font-size: 14px;
+  padding: 12px 22px; border-radius: 999px; border: 0; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 8px;
+  text-decoration: none;
+  transition: background var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out), transform var(--dur-fast);
+}
+.btn:active { transform: translateY(1px); opacity: .92; }
+.btn--primary { background: #000; color: #fff; }
+.btn--primary:hover { background: #1A1A1A; color: #fff; }
+.btn--accent { background: var(--infra-green); color: #000; }
+.btn--accent:hover { background: #95B829; }
+.btn--ghost { background: transparent; color: #000; border: 2px solid #000; padding: 10px 20px; }
+.btn--ghost:hover { background: #000; color: #fff; }
+
+/* ---------- Hero ---------- */
+.nsfi-hero {
+  display: grid; grid-template-columns: 1fr; gap: 48px;
+  padding: 48px 32px 96px;
+  max-width: 1280px; margin: 0 auto;
+}
+.nsfi-hero__inner { max-width: 920px; }
+.nsfi-hero__intro {
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--clay); margin: 0 0 24px;
+}
+.nsfi-hero__count { color: #000; font-weight: 700; }
+.nsfi-hero__headline {
+  font-family: var(--font-display); font-weight: 540;
+  font-size: clamp(40px, 7vw, 96px); line-height: 1.02; letter-spacing: -0.02em;
+  color: #000; margin: 0 0 24px;
+  text-wrap: balance;
+}
+.nsfi-hero__lede {
+  font-family: var(--font-sans);
+  font-size: clamp(16px, 1.4vw, 22px); line-height: 1.5; color: var(--fg-2);
+  max-width: 820px; margin: 0;
+}
+.nsfi-hero__glyphs {
+  list-style: none; padding: 0; margin: 32px 0 0;
+  display: flex; flex-wrap: wrap; gap: 16px;
+}
+.nsfi-hero__glyphs li {
+  font-family: var(--font-display); font-weight: 540; font-size: 32px;
+  width: 64px; height: 64px;
+  display: flex; align-items: center; justify-content: center;
+  border: 2px solid #000;
+}
+.nsfi-hero__glyphs .is-green { background: var(--infra-green); }
+.nsfi-hero__glyphs .is-orange { background: var(--thermal-orange); }
+.nsfi-hero__glyphs .is-violet { background: var(--violet); }
+.nsfi-hero__figure { margin: 0; }
+.nsfi-hero__image {
+  width: 100%; aspect-ratio: 16/9; background: #000;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--infra-green); border: 1px solid var(--border-3);
+  font-family: var(--font-mono); font-size: 14px; letter-spacing: .06em; text-transform: uppercase;
+  background-image:
+    linear-gradient(#000,#000),
+    radial-gradient(rgba(255,255,255,.18) 1px, transparent 1.5px);
+  background-size: 100% 100%, 12px 12px;
+  background-blend-mode: normal, normal;
+}
+.nsfi-hero__caption {
+  margin-top: 16px; display: flex; flex-direction: column; gap: 12px;
+  font-size: 14px; color: var(--clay);
+}
+.nsfi-hero__partners {
+  display: flex; gap: 20px; flex-wrap: wrap;
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--fg-2);
+}
+
+/* ---------- Section ---------- */
+.nsfi-section {
+  padding: 96px 32px;
+  max-width: 1280px; margin: 0 auto;
+}
+.nsfi-section--paper { background: var(--concrete); max-width: none; padding-left: max(32px, calc((100vw - 1280px) / 2 + 32px)); padding-right: max(32px, calc((100vw - 1280px) / 2 + 32px)); }
+.nsfi-section--green { background: var(--infra-green); max-width: none; padding-left: max(32px, calc((100vw - 1280px) / 2 + 32px)); padding-right: max(32px, calc((100vw - 1280px) / 2 + 32px)); }
+.nsfi-section__head {
+  font-family: var(--font-display); font-weight: 540;
+  font-size: clamp(40px, 6vw, 88px); line-height: 1.05; letter-spacing: -0.02em;
+  color: #000; margin: 16px 0 24px; max-width: 1100px;
+}
+.nsfi-section__lede {
+  font-family: var(--font-sans);
+  font-size: 20px; line-height: 1.55; color: var(--fg-2);
+  max-width: 820px; margin: 0 0 16px;
+}
+
+/* ---------- Marker ---------- */
+.nsfi-marker {
+  display: inline-flex; align-items: baseline; gap: 6px;
+  border-bottom: 3px solid #000;
+  padding-bottom: 6px; padding-right: 18px;
+  font-family: var(--font-mono); font-size: 14px; letter-spacing: .06em; text-transform: uppercase;
+  color: #000;
+}
+.nsfi-marker__glyph {
+  font-family: var(--font-sans); font-weight: 700; font-size: 20px;
+  letter-spacing: 0; color: #000;
+}
+.nsfi-marker__label { color: #000; }
+
+/* ---------- Principles ---------- */
+.nsfi-principles {
+  margin-top: 64px;
+  display: grid; grid-template-columns: 1fr; gap: 64px;
+}
+@media (min-width: 900px) { .nsfi-principles { grid-template-columns: 1fr 1fr 1fr; } }
+.nsfi-principle__image {
+  width: 100%; aspect-ratio: 4/3;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--infra-green); border: 1px solid var(--border-3);
+  margin-bottom: 16px;
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase;
+  background-image: radial-gradient(rgba(255,255,255,.12) 1px, transparent 1.4px);
+  background-size: 10px 10px;
+}
+.nsfi-principle__caption { font-size: 13px; color: var(--clay); margin: 0 0 16px; line-height: 1.5; font-style: italic; }
+.nsfi-principle__title { font-family: var(--font-display); font-weight: 540; font-size: 28px; line-height: 1.15; color: #000; margin: 0 0 8px; letter-spacing: -0.01em; }
+.nsfi-principle__eyebrow {
+  display: inline-flex; align-items: baseline; gap: 4px;
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--clay); margin-bottom: 12px;
+}
+.nsfi-principle__eyebrow .nsfi-marker__glyph { font-size: 14px; }
+.nsfi-principle__body { font-family: var(--font-sans); font-size: 15px; line-height: 1.55; color: var(--fg-2); margin: 0; }
+
+/* ---------- Format List ---------- */
+.nsfi-format { list-style: none; margin: 64px 0 0; padding: 0; display: flex; flex-direction: column; gap: 32px; }
+.nsfi-format__item {
+  display: grid; grid-template-columns: 88px 1fr; gap: 32px; align-items: baseline;
+  border-top: 2px solid #000; padding-top: 24px;
+}
+.nsfi-format__num { font-family: var(--font-display); font-weight: 540; font-size: 80px; line-height: .9; color: #000; }
+.nsfi-format__title { font-family: var(--font-display); font-weight: 540; font-size: 36px; margin: 0 0 12px; color: #000; line-height: 1.05; letter-spacing: -0.01em; }
+.nsfi-format__glyph { color: #000; }
+.nsfi-format__body p { font-family: var(--font-sans); font-size: 17px; line-height: 1.55; color: var(--fg-2); margin: 0; max-width: 820px; }
+
+/* ---------- Salon Topics ---------- */
+.nsfi-topics { margin-top: 32px; }
+.nsfi-topics__head { font-family: var(--font-sans); font-weight: 700; font-size: 18px; color: var(--clay); margin: 0 0 24px; text-transform: none; }
+.nsfi-topics__grid {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0;
+  border-top: 1px solid #000;
+}
+.nsfi-topics__item {
+  padding: 24px; display: flex; flex-direction: column; gap: 12px;
+  border-bottom: 1px solid #000; border-right: 1px solid #000;
+  background: #fff;
+}
+.nsfi-topics__num {
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--clay);
+}
+.nsfi-topics__title { font-family: var(--font-display); font-weight: 540; font-size: 22px; margin: 0; color: #000; letter-spacing: -0.01em; }
+.nsfi-topics__body { font-family: var(--font-sans); font-size: 14px; line-height: 1.5; color: var(--fg-2); margin: 0; }
+
+/* ---------- Form ---------- */
+.nsfi-form { max-width: 720px; display: flex; flex-direction: column; gap: 18px; }
+.nsfi-form__head { font-family: var(--font-display); font-weight: 540; font-size: clamp(28px, 4vw, 48px); line-height: 1.1; color: #000; margin: 0; letter-spacing: -0.02em; }
+.nsfi-form__lede { font-family: var(--font-sans); font-size: 16px; line-height: 1.55; color: #111; margin: 0; max-width: 640px; }
+.nsfi-form__honey { color: #111; opacity: .6; margin: 0; }
+.nsfi-form__honeyfield { display: none; }
+.nsfi-form__row { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+@media (max-width: 640px) { .nsfi-form__row { grid-template-columns: 1fr; } }
+.nsfi-form__field { display: flex; flex-direction: column; gap: 4px; }
+.nsfi-form__field span { font-family: var(--font-mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: #111; }
+.nsfi-form__field input,
+.nsfi-form__field textarea {
+  font-family: var(--font-sans); font-size: 16px; padding: 6px 0;
+  border: 0; border-bottom: 2px solid #000; background: transparent; outline: none; color: #000;
+  resize: vertical;
+}
+.nsfi-form__field input::placeholder,
+.nsfi-form__field textarea::placeholder { color: rgba(0,0,0,.4); }
+.nsfi-form__field input:focus,
+.nsfi-form__field textarea:focus { border-color: #000; background: rgba(255,255,255,.4); }
+.nsfi-form__check { display: inline-flex; align-items: center; gap: 10px; font-size: 15px; color: #000; cursor: pointer; user-select: none; }
+.nsfi-form__check input { display: none; }
+.nsfi-form__box { width: 18px; height: 18px; border: 2px solid #000; display: inline-block; background: transparent; transition: background var(--dur-fast); }
+.nsfi-form__check input:checked + .nsfi-form__box { background: #000; }
+.nsfi-form .btn { align-self: flex-start; }
+.nsfi-form--sent { gap: 8px; }
+.nsfi-form--sent h3 { font-family: var(--font-display); font-weight: 540; font-size: 36px; margin: 0; }
+
+/* ---------- Footer ---------- */
+.nsfi-foot { background: #000; color: #fff; padding: 64px 32px 32px; }
+.nsfi-foot__top { max-width: 1280px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; flex-wrap: wrap; }
+.nsfi-foot__mark { width: 220px; height: auto; }
+.nsfi-foot__socials { list-style: none; display: flex; gap: 24px; padding: 0; margin: 0; }
+.nsfi-foot__socials a { color: #fff; text-decoration: none; font-family: var(--font-sans); font-size: 15px; }
+.nsfi-foot__socials a:hover { color: var(--infra-green); }
+.nsfi-foot__bottom {
+  max-width: 1280px; margin: 48px auto 0;
+  display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap;
+  padding-top: 24px; border-top: 1px solid #2A2A2A;
+}
+.nsfi-foot__bottom .pixel { color: rgba(255,255,255,.6); }
+.nsfi-foot__bottom a { color: #fff; }
+
+/* ---------- Dot motif (decorative element) ---------- */
+.nsfi-dots {
+  background-image: radial-gradient(#000 1.2px, transparent 1.4px);
+  background-size: 12px 12px;
+}

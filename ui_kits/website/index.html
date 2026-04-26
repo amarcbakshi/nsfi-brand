@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>nSFi · New Social Forms</title>
+<link rel="icon" href="../../Logos/JPEG/Avatar.jpg">
+<link rel="stylesheet" href="../../colors_and_type.css">
+<link rel="stylesheet" href="./site.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body class="nsfi">
+<div id="root"></div>
+
+<script type="text/babel" src="./Nav.jsx"></script>
+<script type="text/babel" src="./Hero.jsx"></script>
+<script type="text/babel" src="./SectionMarker.jsx"></script>
+<script type="text/babel" src="./PrincipleCard.jsx"></script>
+<script type="text/babel" src="./FormatList.jsx"></script>
+<script type="text/babel" src="./SalonTopics.jsx"></script>
+<script type="text/babel" src="./ContactForm.jsx"></script>
+<script type="text/babel" src="./Footer.jsx"></script>
+
+<script type="text/babel">
+function App() {
+  return (
+    <div className="nsfi-page">
+      <Nav />
+      <main>
+        <Hero />
+
+        <section className="nsfi-section">
+          <SectionMarker glyph="‡" label="Principles" />
+          <h2 className="nsfi-section__head">Why?</h2>
+          <p className="nsfi-section__lede">
+            We live amid the collapse of civic, spiritual, and digital spaces that once held us together. Yet everywhere, new experiments in belonging are emerging.
+          </p>
+          <p className="nsfi-section__lede">
+            New Social Forms exists to surface, connect, and advance these experiments. Drawing on current research, age-old lived practice, and creative experimentation, we're helping map and promote a new field devoted to defining the social architectures that promote meaningful human connections.
+          </p>
+
+          <div className="nsfi-principles">
+            <PrincipleCard
+              imageLabel="principle-conversations.jpg"
+              imageBg="#1A1A1A"
+              caption="Taking inspiration from immersive theatre, DisCourse was an unconventional dinner series hosted in an MIT basement dressed-up as an archive of the future."
+              title="Conversations as Worlds"
+              body="Immersive environments can create temporary worlds with their own social physics, liberating us from the invisible norms that keep us performing, guarded, or small. How do we design these temporary alternative realities?"
+            />
+            <PrincipleCard
+              imageLabel="principle-rituals.jpg"
+              imageBg="#2A2A2A"
+              caption="AI Seances are collaborative experiences which encourage collective reflection with an AI model."
+              title="AI as Collective Mirror"
+              body="We turn to AI with our biggest questions — about meaning, purpose, connection — but we ask alone. What if AI could be used as a site for collective understanding and meaning-making?"
+            />
+            <PrincipleCard
+              imageLabel="principle-ai.jpg"
+              imageBg="#0F0F0F"
+              caption="In Light Rituals, people gathered around an altar to share and listen to community stories."
+              title="Ritualized Reciprocity"
+              body="How do you create social experiences which shift from consuming content to reciprocated vulnerability?"
+            />
+          </div>
+        </section>
+
+        <section className="nsfi-section nsfi-section--paper">
+          <SectionMarker glyph="~" label="Format" />
+          <h2 className="nsfi-section__head">A Living Map of Emerging Social Forms</h2>
+          <p className="nsfi-section__lede">
+            New Social Forms brings people together to explore how humans create meaning and connection. We do this through three core activities:
+          </p>
+          <FormatList />
+        </section>
+
+        <section className="nsfi-section">
+          <SectionMarker glyph="*" label="Salons" />
+          <SalonTopics />
+        </section>
+
+        <section className="nsfi-section nsfi-section--green" id="contact">
+          <SectionMarker glyph="→" label="Register" />
+          <ContactForm />
+        </section>
+      </main>
+      <Footer />
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+</body>
+</html>

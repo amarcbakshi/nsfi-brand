@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Card — Section Markers</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;background:var(--bg-1);}
+  .card{padding:24px;display:flex;flex-direction:column;gap:14px;font-family:var(--font-sans);}
+  .marker{display:flex;align-items:baseline;gap:.4em;font-family:var(--font-mono);font-size:14px;letter-spacing:.08em;text-transform:uppercase;border-bottom:3px solid #000;padding-bottom:6px;}
+  .glyph{font-family:"UN-11ST",sans-serif;font-weight:700;font-size:18px;color:#A7CC2E;letter-spacing:0;}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+</style></head>
+<body class="nsfi">
+<div class="card">
+  <div class="row">
+    <div class="marker"><span class="glyph">‡</span>Principles</div>
+    <div class="marker"><span class="glyph">~</span>Format</div>
+    <div class="marker"><span class="glyph">*</span>Salons</div>
+    <div class="marker"><span class="glyph">@</span>About</div>
+    <div class="marker"><span class="glyph">◊</span>Research</div>
+    <div class="marker"><span class="glyph">[]</span>Prototyping</div>
+  </div>
+</div>
+</body></html>

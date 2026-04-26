@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Card — Color Surfaces</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;background:var(--bg-1);}
+  .card{padding:20px 24px;display:flex;flex-direction:column;gap:14px;font-family:var(--font-sans);}
+  .row{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;}
+  .sw{display:flex;flex-direction:column;gap:6px;}
+  .chip{height:64px;border-radius:var(--r-2);border:1px solid var(--border-3);}
+  .name{font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-2);}
+  .hex{font-family:var(--font-mono);font-size:10px;color:var(--fg-3);}
+</style></head>
+<body class="nsfi">
+<div class="card">
+  <div class="row">
+    <div class="sw"><div class="chip" style="background:#FAFAF7"></div><div class="name">bg-1 paper</div><div class="hex">#FAFAF7</div></div>
+    <div class="sw"><div class="chip" style="background:#FFFFFF"></div><div class="name">bg-2 surface</div><div class="hex">#FFFFFF</div></div>
+    <div class="sw"><div class="chip" style="background:#EFECE3"></div><div class="name">bg-3 inset</div><div class="hex">#EFECE3</div></div>
+    <div class="sw"><div class="chip" style="background:#F4F1E8"></div><div class="name">paper-warm</div><div class="hex">#F4F1E8</div></div>
+    <div class="sw"><div class="chip" style="background:#1A1A1A"></div><div class="name">bg-4 dark</div><div class="hex">#1A1A1A</div></div>
+  </div>
+</div>
+</body></html>

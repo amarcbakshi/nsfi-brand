@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Card — Dot Motif</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;background:#fff;}
+  .card{padding:20px 24px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;}
+  .swatch{aspect-ratio:1.4/1;border:1px solid #D9DDD4;display:flex;align-items:flex-end;padding:10px;font-family:"TINY5x3",monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#000;}
+  .dots-grid{background-image:radial-gradient(#000 1.4px,transparent 1.6px);background-size:14px 14px;background-position:6px 6px;}
+  .dots-dense{background-image:radial-gradient(#000 1.2px,transparent 1.4px);background-size:7px 7px;}
+  .dots-frame{background:#fff;position:relative;}
+  .dots-frame::before{content:"";position:absolute;inset:8px;background-image:radial-gradient(#000 1.2px,transparent 1.4px);background-size:10px 10px;}
+  .label{font-family:"TINY5x3",monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#84817D;text-align:center;margin-top:6px;}
+  .col{display:flex;flex-direction:column;}
+</style></head>
+<body class="nsfi">
+<div class="card">
+  <div class="col"><div class="swatch dots-grid">BINDER GRID</div><div class="label">grid · low density</div></div>
+  <div class="col"><div class="swatch dots-dense">DOT-MATRIX</div><div class="label">dot-matrix · dense</div></div>
+  <div class="col"><div class="swatch dots-frame"><span style="position:relative;z-index:1">PUNCH CARD</span></div><div class="label">framed</div></div>
+</div>
+</body></html>

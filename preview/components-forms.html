@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Card — Forms</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;background:var(--bg-1);}
+  .card{padding:20px 24px;display:grid;grid-template-columns:1fr 1fr;gap:14px;font-family:var(--font-sans);}
+  .field{display:flex;flex-direction:column;gap:4px;}
+  label{font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-3);}
+  input,textarea{font-family:var(--font-sans);font-size:15px;border:0;border-bottom:2px solid #000;background:transparent;padding:6px 0;color:#000;outline:none;}
+  input:focus,textarea:focus{border-color:#A7CC2E;}
+  .note{font-family:var(--font-mono);font-size:10px;color:var(--fg-4);letter-spacing:.06em;text-transform:uppercase;}
+  .check{display:flex;gap:8px;align-items:center;font-size:13px;color:var(--fg-2);}
+  .box{width:14px;height:14px;border:2px solid #000;display:inline-block;background:#A7CC2E;}
+</style></head>
+<body class="nsfi">
+<div class="card">
+  <div class="field"><label>First Name *</label><input value="Jordan"></div>
+  <div class="field"><label>Email *</label><input value="jordan@studio.org"></div>
+  <div class="field" style="grid-column:1/-1"><label>Message *</label><textarea rows="2">I'd love to learn more about NSF — especially your salon series.</textarea></div>
+  <div class="check"><span class="box"></span>Yes, please call me</div>
+  <div class="note">Don't fill this out if you are a human</div>
+</div>
+</body></html>

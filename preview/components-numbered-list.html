@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Card — Numbered List</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;background:var(--bg-1);}
+  .card{padding:20px 24px;display:flex;flex-direction:column;gap:12px;font-family:var(--font-sans);}
+  .item{display:grid;grid-template-columns:48px 1fr;gap:14px;align-items:baseline;border-bottom:1px solid var(--border-3);padding-bottom:10px;}
+  .item:last-child{border-bottom:0;}
+  .num{font-family:"UN-11ST",sans-serif;font-weight:700;font-size:40px;line-height:1;color:#000;}
+  .body h6{font-family:var(--font-sans);font-weight:700;font-size:18px;margin:0 0 4px;color:#000;}
+  .body h6 .glyph{color:#A7CC2E;}
+  .body p{font-size:13px;line-height:1.45;color:var(--fg-3);margin:0;}
+</style></head>
+<body class="nsfi">
+<div class="card">
+  <div class="item"><div class="num">1</div><div class="body"><h6>Salons <span class="glyph">*</span></h6><p>Intimate, cross-disciplinary gatherings.</p></div></div>
+  <div class="item"><div class="num">2</div><div class="body"><h6>Research <span class="glyph">◊</span></h6><p>A living database of social forms.</p></div></div>
+  <div class="item"><div class="num">3</div><div class="body"><h6>Prototyping <span class="glyph">[]</span></h6><p>Small grants for new social experiments.</p></div></div>
+</div>
+</body></html>

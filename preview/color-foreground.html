@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Card — Foreground / Neutral Scale</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;background:#fff;}
+  .card{padding:20px 24px;display:flex;flex-direction:column;gap:14px;}
+  .row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+  .sw{display:flex;flex-direction:column;gap:6px;}
+  .chip{height:80px;border:1px solid #D9DDD4;}
+  .name{font-family:"TINY5x3",monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#222;}
+  .role{font-family:"UN-11ST",sans-serif;font-size:11px;color:#84817D;}
+  .hex{font-family:"TINY5x3",monospace;font-size:10px;color:#84817D;}
+  .note{font-family:"UN-11ST",sans-serif;font-size:12px;color:#84817D;line-height:1.5;max-width:560px;}
+</style></head>
+<body class="nsfi">
+<div class="card">
+  <div class="note">Per V1 guidelines: body and headline type should almost always be black or white; neutral backgrounds for most applications. Concrete + Clay are the official neutrals.</div>
+  <div class="row">
+    <div class="sw"><div class="chip" style="background:#222"></div><div class="name">Ink</div><div class="role">primary text</div><div class="hex">#222222</div></div>
+    <div class="sw"><div class="chip" style="background:#84817D"></div><div class="name">Clay</div><div class="role">secondary text · rules</div><div class="hex">#84817D</div></div>
+    <div class="sw"><div class="chip" style="background:#D9DDD4"></div><div class="name">Concrete</div><div class="role">soft surface · disabled</div><div class="hex">#D9DDD4</div></div>
+    <div class="sw"><div class="chip" style="background:#fff"></div><div class="name">White</div><div class="role">page · cards</div><div class="hex">#FFFFFF</div></div>
+  </div>
+</div>
+</body></html>

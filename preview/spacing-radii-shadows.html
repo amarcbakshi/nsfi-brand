@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Card — Radii & Shadows</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;background:var(--bg-1);}
+  .card{padding:20px 24px;display:flex;flex-direction:column;gap:14px;font-family:var(--font-sans);}
+  .row{display:flex;gap:14px;align-items:flex-end;}
+  .item{display:flex;flex-direction:column;gap:6px;align-items:center;}
+  .box{width:64px;height:48px;background:#fff;border:1px solid var(--border-2);}
+  .meta{font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-3);}
+  .sec{font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-2);}
+</style></head>
+<body class="nsfi">
+<div class="card">
+  <div class="sec">Radii</div>
+  <div class="row">
+    <div class="item"><div class="box" style="border-radius:0"></div><div class="meta">r-0 · 0</div></div>
+    <div class="item"><div class="box" style="border-radius:2px"></div><div class="meta">r-1 · 2</div></div>
+    <div class="item"><div class="box" style="border-radius:4px"></div><div class="meta">r-2 · 4</div></div>
+    <div class="item"><div class="box" style="border-radius:8px"></div><div class="meta">r-3 · 8</div></div>
+    <div class="item"><div class="box" style="border-radius:999px"></div><div class="meta">pill</div></div>
+  </div>
+  <div class="sec">Shadows</div>
+  <div class="row">
+    <div class="item"><div class="box" style="box-shadow:0 1px 0 rgba(0,0,0,.06);border-color:transparent"></div><div class="meta">s-1</div></div>
+    <div class="item"><div class="box" style="box-shadow:0 2px 6px rgba(0,0,0,.08);border-color:transparent"></div><div class="meta">s-2</div></div>
+    <div class="item"><div class="box" style="box-shadow:0 8px 24px rgba(0,0,0,.12);border-color:transparent"></div><div class="meta">s-3</div></div>
+    <div class="item"><div class="box" style="box-shadow:0 1px 0 rgba(0,0,0,.05),0 12px 32px -8px rgba(0,0,0,.10);border-color:transparent"></div><div class="meta">paper</div></div>
+  </div>
+</div>
+</body></html>
