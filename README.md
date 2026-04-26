@@ -1,6 +1,6 @@
 # nSFi Brand & Design Assets
 
-Official brand and design assets for **New Social Forms** (nSFi)—an initiative of the [MIT Center for Constructive Communication](https://www.ccc.mit.edu/) at the MIT Media Lab, made possible by Google Xi.
+Official brand and design assets for **New Social Forms** (nSFi)—an initiative of the [MIT Center for Constructive Communication](https://www.ccc.mit.edu/) at the MIT Media Lab, made possible by Google Xi (Google Experience Institute).
 
 > New Social Forms brings together artists, technologists, researchers, and civic actors to explore, prototype, and scale the social architectures that strengthen connection and collective agency in a time of rapid technological and cultural change.
 >
@@ -13,7 +13,7 @@ Official brand and design assets for **New Social Forms** (nSFi)—an initiative
 ```
 nsfi-brand/
 ├── Brand Guidelines/
-│   └── MIT_NSF_Guidelines_V1.pdf     # Full brand guidelines (colors, typography, usage rules)
+│   └── MIT_nSFi_Guidelines_V1.pdf    # Full brand guidelines (colors, typography, usage rules)
 │
 ├── Logos/
 │   ├── SVG/                          # Preferred format — scalable, web-ready
@@ -33,7 +33,7 @@ nsfi-brand/
 │       └── webfonts/                 # WOFF and WOFF2 for web embedding
 │
 └── PPT Template/
-    └── NSF_Presentation_Template.pptx
+    └── nSFi_Presentation_Template.pptx
 ```
 
 ---
@@ -68,7 +68,7 @@ TINY5x3 is used as an accent typeface for decorative and UI contexts. A variable
 
 ## Brand Guidelines
 
-See `Brand Guidelines/MIT_NSF_Guidelines_V1.pdf` for full usage rules including color palette, spacing, logo clear space, and dos/don'ts.
+See `Brand Guidelines/MIT_nSFi_Guidelines_V1.pdf` for full usage rules including color palette, spacing, logo clear space, and dos/don'ts.
 
 ---
 
